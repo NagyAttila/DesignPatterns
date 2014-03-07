@@ -7,7 +7,7 @@ using namespace std;
 
 class Singleton {
 public:
-  static Singleton& getInstance() {
+  static Singleton& Instance() {
     if (destroyed) {
       new(instance) Singleton;
       atexit(KillSingleton);
@@ -39,6 +39,6 @@ Singleton* Singleton::instance = new Singleton;
 
 int main(int argc, const char *argv[])
 {
-  Singleton::getInstance().print();
+  Singleton::Instance().print();
   return 0;
 }

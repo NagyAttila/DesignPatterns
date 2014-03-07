@@ -6,7 +6,7 @@ using namespace std;
 
 class Singleton {
 public:
-  static Singleton& getInstance() {
+  static Singleton& Instance() {
     static Singleton instance;
     return instance;
   }
